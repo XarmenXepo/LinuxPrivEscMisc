@@ -1,10 +1,10 @@
 // look for binaries that have SUID perms (-perm -04000)
 // if these SUID binaries are missing files ('no such file or directory') during compilation, it is vulnerable to Shared Object injection
-// malicious code can be injection in lieu of those missing files/directories, and thus executed when these vulnerable binaries are compliled
+// malicious code can be injection in lieu of those missing files/directories, and thus executed when these vulnerable binaries run
 
 
 
-// use strace to determine if such binaries are vulnerable with missing files/directories
+// use Linux tool 'strace' to determine if such binaries contain missing files/directories, indicative that they are vulnerable
 // what is strace? A diagnostic and debugging tool for the command line that can be used to trace system calls that are made and received by a running process.
 
 
